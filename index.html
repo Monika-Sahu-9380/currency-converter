@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="shortcut icon" href="https://visualpharm.com/assets/565/Currency%20Exchange-595b40b65ba036ed117d39ce.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="heading" >Currency Converter</h2>
+        <form>
+            <div class="amount">
+                <input type="number" id="enter-amount" placeholder="" aria-label="Enter the amount" required>
+                <label for="enter-amount">Enter Amount : </label>
+            </div>
+            <div class="dropdown" aria-label="dropdowns to select the country">
+                <div class="from">
+                    <p>From</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/US/flat/64.png" alt="Flag of the country">
+                        <select name="from" aria-label="Select the country to convert from.">
+                        </select>
+                    </div>
+                </div>
+                <button id="swap" type="button" title="Swap currencies">
+                    <i class="ri-arrow-left-right-line"></i>
+                </button>
+                <div class="to">
+                    <p>To</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/IN/flat/64.png" alt="Glag of the country">
+                        <select name="to" aria-label="Select the country to convert to.">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="msg" aria-label="display exchange rate"  aria-live="polite"></div>
+            <button type="button" id="get-exchange-rate">Get Exchange Rate</button>
+        </form>
+    </div>
+    <script src="currency-country-codes.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
